@@ -3,21 +3,22 @@
 #Регулярные выражения использовать нельзя
 #Натуральные числа. Выводит на экран только простые числа. Минимальное и максимальное число выводятся прописью.
 primal = {'2': 'два', '3': 'три',  '5': 'пять',  '7': 'семь'}
+
 s = ''
-with open('data.txt') as file:
-    line = file.readline() 
+with open('data.txt') as file: 
+    line = file.readline()     
 s=str(line) 
 blocks = s.split(" ") 
 print(blocks)
 print('\n')
 
 max_min_array = []
-temp_row = ""
+temp_row = "" 
 primal_row = ""
 for i in range(0, blocks.__len__()): 
-    for j in range(0, blocks[i].__len__()):
+    for j in range(0, blocks[i].__len__()): 
         temp_row += blocks[i][j] 
-        if (blocks[i][j] == '2' or blocks[i][j] == '3' or blocks[i][j] == '5' or blocks[i][j] == '7'):
+        if (blocks[i][j] == '2' or blocks[i][j] == '3' or blocks[i][j] == '5' or blocks[i][j] == '7'): 
             primal_row += blocks[i][j]
         for q in range(0, primal_row.__len__()):
             if (primal_row[q] == '2' or primal_row[q] == '3' or primal_row[q] == '5' or primal_row[q] == '7'):
@@ -28,3 +29,4 @@ for i in range(0, blocks.__len__()):
     max_min_array.clear()
     temp_row=''
     primal_row=''
+
